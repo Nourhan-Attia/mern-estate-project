@@ -13,6 +13,7 @@ import MainLayout from "./layouts/MainLayout.jsx";
 import PrivateRoute from "./components/PrivateRoute.jsx";
 import CreateListing from "./pages/CreateListing.jsx";
 import UpdateListing from "./pages/UpdateListing.jsx";
+import Listing from "./pages/Listing.jsx";
 
 const App = () => {
   const router = createBrowserRouter(
@@ -21,6 +22,7 @@ const App = () => {
         <Route path="/" element={<MainLayout />}>
           <Route index element={<Home />} />
           <Route path="/about" element={<About />} />
+          <Route path="/listing/listingId" element={<Listing />}/>
           <Route element={<PrivateRoute />}>
             <Route path="/profile" element={<Profile />} />
             <Route path="/create-listing" element={<CreateListing />} />
